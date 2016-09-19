@@ -1,5 +1,4 @@
  //declare bacteria variables here  
- //Bear grizzly = new Bear();
 
  void setup()   
  {     
@@ -10,7 +9,6 @@
  void draw()   
  {    
  	//move and show the bacteria 
- 	//grizzly.show();
  	fill(255);
  	noStroke();
  	ellipse(155, 155, 100, 170); 
@@ -19,9 +17,13 @@
  	fill(210,180,140);
  	ellipse(150,150,50,50);
  	ellipse(300, 150, 50, 50);
+ 	//nose
+ 	fill(255,153,153);
+ 	ellipse(225, 220, 50, 80);
  	//mouth
- 	line(155, 155, 300, 150);
-
+ 	fill(255,0,127);
+ 	rect(270, 250, 90, 80);
+ 	
 
  }  
  /*class Bear    
