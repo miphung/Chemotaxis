@@ -4,7 +4,7 @@ Face blob;
  void setup()   
  {     
  	//initialize bacteria variables here 
- 	size(500, 500);  
+ 	size(450, 450);  
  }   
  void draw()   
  {    
@@ -12,22 +12,32 @@ Face blob;
  	blob = new Face();
  	blob.roll();
  	blob.show();
+
  }  
  class Face   
  {     
  	//lots of java!
  	int xL, xR, y;
+ 	int flash;
  	Face()
  	{
  		xL = 150;
 		xR = 300;
 		y = 150;
+		flash = 0;
  	}
  	void roll()
  	{
 		xL = xL + (int)(Math.random()*5+1);
 	 	xR = xR + (int)(Math.random()*5+1);
 	 	y = y + (int)(Math.random()*5 +1);
+ 	}
+ 	void flashing()
+ 	{
+ 		 	
+ 	if (frameCount %5 ==0)
+ 		flash++;
+
  	}
  	void show()
  	{
@@ -48,5 +58,8 @@ Face blob;
 	 	rect(185, 270, 90, 80);
 	 	fill(255,204,207);
 	 	ellipse(230, 330, 90, 40);
+	 	//flash
+	 	fill(0);
+	 	rect(20,20,flash,20);
  	}   
  }    
